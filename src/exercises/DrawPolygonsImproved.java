@@ -14,11 +14,11 @@ public class DrawPolygonsImproved extends Component {
     private DrawPolygonsImproved(){
         polygons = new ArrayList<>();
 
-        Square p1 =
+        Polygon p1 =
                 new Square( new Point (100,100),30);
-        Triangle p2 =
+        Polygon p2 =
                 new Triangle(new Point (150,150),40);
-        exercises.Polygons.Rectangle p3 =
+        Polygon p3 =
                 new Rectangle(new Point(100,200),80,20);
 
         polygons.add(p1);
