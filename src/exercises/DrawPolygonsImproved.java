@@ -21,9 +21,22 @@ public class DrawPolygonsImproved extends Component {
         Polygon p3 =
                 new Rectangle(new Point(100,200),80,20);
 
+        Rectangle p4 =
+                new Rectangle(new Point(100,200),80,20);
+
         polygons.add(p1);
         polygons.add(p2);
         polygons.add(p3);
+        polygons.add(p4);
+
+        p1.overlaps(p4);
+        p2.overlaps(p3);
+        p3.overlaps(p1);
+        p4.overlaps(p4);
+
+        for (Polygon p : polygons) {
+            p.overlaps(p4);
+        }
     }
 
     @Override

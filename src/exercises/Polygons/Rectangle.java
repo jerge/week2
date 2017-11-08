@@ -13,11 +13,27 @@ public class Rectangle extends Polygon {
         this.center = center;
     }
 
+    public boolean overlaps(Rectangle p){
+        System.out.println("Rectangle.overlaps: " + this.toString() + " vs " + p.toString());
+        return true;
+    }
+
+    @Override
+    public boolean overlaps(Polygon p){
+        System.out.println("Rectangle.polygon.overlaps: " + this.toString() + " vs " + p.toString());
+        return true;
+    }
+
     @Override
     protected void paint(Graphics g){
         g.drawRect(pbd(Directions.LEFT),
                 pbd(Directions.UP),
                 getWidth(),getHeight());
+    }
+
+    @Override
+    public String toString(){
+        return "Rectangle";
     }
 
 }

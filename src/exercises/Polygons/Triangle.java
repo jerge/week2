@@ -13,6 +13,17 @@ public class Triangle extends Polygon {
         this.center = center;
     }
 
+    public boolean overlaps(Triangle p){
+        System.out.println("Triangle.overlaps: " + this.toString() + " vs " + p.toString());
+        return true;
+    }
+
+
+    @Override
+    public boolean overlaps(Polygon p){
+        System.out.println("Triangle.polygon.overlaps: " + this.toString() + " vs " + p.toString());
+        return true;
+    }
     @Override
     protected void paint(Graphics g){
         g.drawLine(getCenter().x, pbd(Directions.UP),
@@ -21,6 +32,12 @@ public class Triangle extends Polygon {
                 pbd(Directions.RIGHT), pbd(Directions.DOWN));
         g.drawLine(pbd(Directions.RIGHT), pbd(Directions.DOWN),
                 getCenter().x, pbd(Directions.UP));
+    }
+
+
+    @Override
+    public String toString(){
+        return "Triangle";
     }
 
 }

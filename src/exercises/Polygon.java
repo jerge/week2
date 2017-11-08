@@ -12,6 +12,17 @@ public abstract class Polygon {
 
     protected abstract void paint(Graphics g);
 
+    public String toString() {
+        return Polygon.class.getSimpleName();
+    }
+
+//    protected String temp()
+
+    public boolean overlaps(Polygon p){
+        System.out.println("Polygon.overlaps: " + this.toString() + " vs " + p.toString());
+        return true;
+    }
+
     protected Point getCenter(){
         return center;
     }
